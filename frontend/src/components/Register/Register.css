@@ -3,7 +3,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   height: 70vh;
@@ -11,7 +11,8 @@
 
 .form {
   position: absolute;
-  right : 0;
+   right :35%;
+  justify-content: center;
   background-color: white;
   border-radius: 10px;
   padding: 2rem;
@@ -21,7 +22,8 @@
 }
 
 .title {
-  color: #00a278;
+  color: #3983e4;
+  /* color: #3983e4; */
 }
 
 .secondary-action {
@@ -31,28 +33,31 @@
 .link {
   font-weight: 700;
   text-decoration: none;
-  color: #45c09f;
+  color: #287bf7;
+  /* color: #287bf7; */
 }
 
 .link:focus {
-  color: #00a278;
+  color: #3983e4;
 }
 
 .link:active {
-  color: #45c09f;
+  color: #287bf7;
 }
 
 .link:visited {
-  color: #45c09f;
+  color: #287bf7;
 }
 
-/* .button {
-    background-color: #00a278 !important;
+ .button {
+    background-color: #3983e4 !important;
 }
 
 .button:hover {
-    background-color: #00845c !important;
-} */
+    background-color: #0b64e9 !important;
+    background-color: #0b64e9 !important;
+
+}
 
 @media screen and (min-width: 768px) {
   .form {

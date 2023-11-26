@@ -3,7 +3,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     height: 92vh;
 }
@@ -18,7 +18,7 @@
 }
 
 .title {
-    color: #00a278;
+    color: #3983e4;
 }
 
 .secondary-action {
@@ -31,23 +31,23 @@
 }
 
 .link:focus {
-    color: #00a278;
+    color: #3983e4;
 }
 
 .link:active {
-    color: #45c09f;
+    color: #287bf7;
 }
 
 .link:visited {
-    color: #45c09f;
+    color: #287bf7;
 }
 
 /* .button {
-    background-color: #00a278 !important;
+    background-color: #3983e4 !important;
 }
 
 .button:hover {
-    background-color: #00845c !important;
+    background-color: #0b64e9 !important;
 } */
 
 @media screen and (min-width: 768px) {
