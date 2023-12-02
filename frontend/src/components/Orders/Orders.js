@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import DataTable from "react-data-table-component";
 import { Button } from "react-bootstrap";
-// import EditIcon from "@mui/icons-material/Edit";
+import EditIcon from "@mui/icons-material/Edit";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import {downloadBill} from "../../Utils/downloadBill"
 import { config } from "../../App";
@@ -65,6 +65,11 @@ const Orders = (props) => {
       name: "Cost",
       id: "cost",
       selector: (row) => row.price,
+    },
+    {
+      name: "Order Status",
+      id: "order_status",
+      selector: (row) => row.order_status,
     },
     
     {

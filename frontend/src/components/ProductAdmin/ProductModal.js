@@ -25,7 +25,7 @@ const ServiceInfoAdmin = ({
   
   const url = `${config.endpoint}/products`;
    
-   let up= await axios.post(url+'/updateCost',
+    await axios.post(url+'/updateCost',
     finalData,
     {
       headers: {

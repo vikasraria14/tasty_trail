@@ -72,8 +72,8 @@ const ProductAdmin = (props) => {
     },
     
     {
-        name: "Edit Status",
-        id: "downtimePageAction",
+        name: "Edit Cost",
+        id: "action",
         selector: (row) => (
           <EditIcon
             style={{ justifyContent: "center" }}

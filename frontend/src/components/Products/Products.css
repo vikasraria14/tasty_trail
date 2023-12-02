@@ -1,40 +1,39 @@
+/* Updated Styles for Search */
 .search {
   min-width: 24rem;
   position: relative;
-  left: 4rem;
+  left: 2rem;
 }
 
+/* Updated Styles for Hero Section */
 .hero {
   background-image: url("../../assets/hero_image.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 10rem;
+  height: 15rem; /* Increased height for a larger hero section */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.product-grid {
-  width: 100%;
-}
-
 .hero-heading {
-  color: #fff;
-  font-size: 1.5rem;
+  color: #45c09f; /* Updated text color */
+  font-size: 2rem; /* Updated font size */
   width: 80%;
   position: relative;
   left: 1rem;
 }
 
 .hero-highlight {
-  color: #212121;
+  color: #fff; /* Updated text color */
   font-weight: 700;
-  background: #ffb825;
+  background: #45c09f; /* Updated background color */
   border-radius: 5px;
   padding: 0.2rem;
 }
 
+/* Styles for Loading Section */
 .loading {
   display: flex;
   flex-direction: column;
@@ -44,6 +43,7 @@
   height: 50vh;
 }
 
+/* Styles for Search Mobile and Desktop */
 .search-mobile {
   display: block !important;
 }
@@ -53,20 +53,30 @@
 }
 
 @media screen and (min-width: 768px) {
+  /* Updated Styles for Hero Section on Desktop */
   .hero {
-    justify-content: flex-end;
-    height: 20rem;
-    padding-right: 8rem;
+      justify-content: flex-end;
+      height: 25rem; /* Increased height for a larger hero section on desktop */
+      padding-right: 10rem; /* Increased padding on the right */
   }
+
   .hero-heading {
-    position: static;
-    font-size: 3rem;
-    width: 50%;
+      position: static;
+      font-size: 3rem;
+      width: 50%;
   }
+
+  /* Updated Styles for Search on Desktop */
+  .search {
+      min-width: 30rem; /* Increased min-width for a larger search bar on desktop */
+      left: 4rem;
+  }
+
   .search-mobile {
-    display: none !important;
+      display: none !important;
   }
+
   .search-desktop {
-    display: block !important;
+      display: block !important;
   }
 }

@@ -5,12 +5,20 @@ import { config } from "../../../App";
 import DownloadIcon from "@mui/icons-material/Download";
 import Header from "../Header/Header";
 import axios from "axios";
+import EditIcon from "@mui/icons-material/Edit";
 import './order.css'
+import OrderInfo from "./OrderModal"
 const Orders = (props) => {
   const [carData, setCarData] = useState([]);
+  const [show, setShow] = useState(false);
+  const [serviceForm, setServiceForm] = useState({});
   
-  
- 
+  const handleClick = (row) => {
+    let x = row;
+
+    setShow(true);
+    setServiceForm(x);
+  };
   useEffect(() => {
    
     const fetchData = async () => {
@@ -61,6 +69,29 @@ const Orders = (props) => {
       id: "cost",
       selector: (row) => `$${row.price}`,
     },
+    {
+      name: "Order Status",
+      id: "order_status",
+      selector: (row) => row.order_status,
+    },
+
+    {
+      name: "Edit Status",
+      id: "edit_status",
+
+      selector: (row) => {
+       
+
+        return (
+          <EditIcon
+            style={{ justifyContent: "center" }}
+            onClick={() => {
+                handleClick(row)
+            }}
+          />
+        );
+      },
+    },
     
     {
       name: "Download Invoice",
@@ -94,13 +125,14 @@ const Orders = (props) => {
         fixedHeaderScrollHeight="450px"
         subHeader
       />
-      {/* <ServiceInfoUser 
+       <OrderInfo 
           serviceForm={serviceForm}
           show = {show}
           setShow={setShow}
           carData={carData}
           setCarData={setCarData}
-        /> */}
+          className="modal"
+        />
     </>
   );
 };

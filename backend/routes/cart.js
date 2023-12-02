@@ -79,8 +79,8 @@ router.post("/checkout", verifyAuth, async (req, res) => {
     let id = nanoid();
     
     await deleteCartByUser(req.user.username);
-    cart.map((cart1) => {
-      insertOrder(id, req.user.username, cart1.menu_name, cart1.price, cart1.quantity, cart1.label, cart1.category);
+    cart.map((cart1,i) => {
+      insertOrder(id+i, req.user.username, cart1.menu_name, cart1.price, cart1.quantity, cart1.label, cart1.category);
       decreaseMenuQuantity(cart1.menu_id, cart1.quantity)
     });
 

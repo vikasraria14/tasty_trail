@@ -6,7 +6,6 @@ import Thanks from "./components/Thanks/Thanks";
 import Test from "./components/Test/Test"
 import LandingPage from "./components/Landing/LandingPage.js"
 import Orders from './components/Orders/Orders'
-import OrdersAdmin from "./components/Orders/OrdersAdmin";
 import ProductAdmin from "./components/ProductAdmin/ProductAdmin";
 import AdminRegister from "./components/Register/AdminRegister"
 import AdminLogin from "./components/Login/AdminLogin"
@@ -45,9 +44,7 @@ function App() {
         <Route exact path="/orders">
           <Orders />
         </Route>
-        <Route exact path="/ordersAdmin">
-          <OrdersAdmin />
-        </Route>
+        
         <Route exact path="/test">
           <Test />
         </Route>

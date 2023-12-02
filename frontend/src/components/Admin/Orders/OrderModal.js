@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 // import { Button, Modal } from "react-bootstrap";
 import { Modal, Button, Form } from "react-bootstrap";
-import { config } from "../../App";
+import { config } from "../../../App";
 const ServiceInfoAdmin = ({
   serviceForm,
   show,
@@ -16,9 +16,9 @@ const ServiceInfoAdmin = ({
   let orderStages=[
     "new",
     "accepted",
-    
-    "out for Delivery",
-    "Delivered"
+    "shipped",
+    "out for delivery",
+    "delivered"
   ]
   const [currentStatus, setCurrentStatus] = useState(serviceForm.currentStatus);
   
@@ -28,7 +28,7 @@ const ServiceInfoAdmin = ({
   
   const url = `${config.endpoint}/orders`;
    
-   let up= await axios.post(url+"/update",
+    await axios.post(url+"/update",
     finalData,
     {
       headers: {
@@ -36,8 +36,7 @@ const ServiceInfoAdmin = ({
       },
     },)
     
-    let x= await axios.get(url)
-    console.log(x)
+    let x= await axios.get(`${url}/allOrders`)
     setCarData(x.data)
     setShow(false);
   };
